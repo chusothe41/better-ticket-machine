@@ -23,7 +23,7 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
-        price = cost;
+        price = 500;
         balance = 0;
         total = 0;
     }
@@ -98,5 +98,13 @@ public class TicketMachine
         amountToRefund = balance;
         balance = 0;
         return amountToRefund;
+    }
+    
+    public int emptyMachine()
+    {
+        int initial;
+        initial = balance;
+        total = 0;
+        return initial;
     }
 }
