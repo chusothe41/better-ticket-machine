@@ -23,7 +23,7 @@ public class TicketMachine
      */
     public TicketMachine(int cost)
     {
-        price = 500;
+        price = cost;
         balance = 0;
         total = 0;
     }
@@ -106,5 +106,12 @@ public class TicketMachine
         initial = balance;
         total = 0;
         return initial;
+    }
+    
+    public float totalDiscount()
+    {
+        float discount;
+        discount = ((price * 10)/100);
+        return price - discount;
     }
 }
